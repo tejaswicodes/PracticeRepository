@@ -16,7 +16,7 @@ public class TestBase {
 	public TestBase() {
 		prop = new Properties();
 		try {
-			FileInputStream fis= new FileInputStream("D://PracticeWorkspace//TestMaven//src//main//java//com//config//config.properties");
+			FileInputStream fis= new FileInputStream("C://Users//Tejaswi//git//PracticeRepository//TestMaven//src//main//java//com//config//config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
 			
@@ -29,10 +29,11 @@ public class TestBase {
 	
 	public void init()
 	{
+		String url=prop.getProperty("redirect");
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome")){
-			System.setProperty("webdriver.chrome.driver", "D://PracticeWorkspace//TestMaven//drivers//chromedriver.exe");  
+			System.setProperty("webdriver.chrome.driver", "C://Users//Tejaswi//git//PracticeRepository//TestMaven//drivers//chromedriver.exe");  
 			driver = new ChromeDriver();
 		}
-		driver.get(prop.getProperty("url"));
+		driver.get(url);
 	}
 }
