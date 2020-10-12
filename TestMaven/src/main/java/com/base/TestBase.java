@@ -16,10 +16,10 @@ public class TestBase {
 	public TestBase() {
 		prop = new Properties();
 		try {
-			FileInputStream fis= new FileInputStream("D:/PracticeWorkspace/TestMaven/src/main/java/com/config/config.properties");
+			FileInputStream fis= new FileInputStream("D://PracticeWorkspace//TestMaven//src//main//java//com//config//config.properties");
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}catch (IOException e) {
 			// TODO Auto-generated catch block
